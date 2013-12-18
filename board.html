@@ -1,14 +1,38 @@
 <html>
 <head>
   <title>Post-It Board</title>
-
+ 
   <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body id="board">
+<body>
+  <div id="board_selector">
+    <h3>Select a board</h3>
+    <ul id="board_list">
+    </ul>
+    <button id="new_board">New Board</button>
+    <br>
+    <button id="load_samples">Load Samples</button>
+  </div>
 
+  <div id="boards">
+    <!-- append new boards here -->
+  </div>
+
+  <div id="templates">
+    <div class="post-it" id="post-it-template">
+      <div class="header">
+        <a href='#'>X</a>
+      </div>
+      <div class="content" contenteditable="true"></div>
+    </div>
+    <div class="post_board" id="board-template"></div>
+    <li class="board-button" id="list-item-template"></li>
+  </div>
+ 
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+  <script src="sample_boards.js"></script>
   <script src="post-it.js"></script>
 </body>
 </html>

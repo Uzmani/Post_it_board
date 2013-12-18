@@ -1,11 +1,55 @@
-#board {
+body {
+  margin: 0;
+  padding: 0;
   font-family: monospace;
+}
+ 
+#board_selector {
+  position: fixed;
+  z-index: 1000;
+  min-width: 120px;
+  height: 100%;
+  padding: 4px;
+  background-color: #eee;
+  border-right: 1px solid #ddd;
+}
+
+#templates {
+  display: none;
+}
+ 
+#board_selector h3 {
+  margin-top: 0;
+}
+ 
+ul#board_list {
+  padding-left: 20px;
+}
+ 
+ul#board_list li {
+  cursor: pointer;
+  color: #222;
+  list-style-type: none;
+}
+ 
+ul#board_list li:hover {
+  color: #555;
+  background-color: #bbb;
+}
+ 
+ul#board_list li.active {
+  list-style-type: disc;
+}
+ 
+.post_board {
   background-color: #9e8d68;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   position: relative;
 }
-
+ 
 .post-it {
   position: absolute !important;
   width: 160px;
@@ -13,27 +57,27 @@
   box-shadow: -2px 2px 5px #555;
   overflow: hidden;
 }
-
+ 
 .post-it .header {
   background-color: #c2c25b;
   text-align: right;
   padding: 2px;
 }
-
+ 
 .post-it .header:hover {
   background-color: #a8a860;
 }
-
+ 
 .post-it .header a, .post-it .header a:visited {
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
-
+ 
 .post-it .header a:hover {
   color: #eee;
 }
-
+ 
 .post-it .content {
   padding: 10px;
   min-height: 70px;
